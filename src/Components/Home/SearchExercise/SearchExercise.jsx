@@ -2,10 +2,12 @@ import { useEffect,useState } from "react"
 import {exerciseOptions,fetchData} from "../../../utils/Server"
 import SearchCard from "./SearchCard/SearchCard";
 import Exercise from "../../Exercise/Exercise";
+import Gifs from '../../Assets/Gifs.gif'
 const SearchExercise=()=>{
     const [name,setName]=useState("");
     const [exercises,setExercises]=useState([])
     const [bodyPart,setBodyPart]=useState([])
+    const [dispName,setDispName]=useState("")
     useEffect(()=>{
         const getExerciseData=async()=>{
            const displayParts=await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPartList`,exerciseOptions)
@@ -18,7 +20,7 @@ const SearchExercise=()=>{
     }
     const search= async(names)=>{
         if(names){
-        console.log(names);
+        setDispName(names)
         const exerciseData= await fetchData(`https://exercisedb.p.rapidapi.com/exercises`,exerciseOptions)
         const searchExercises=exerciseData.filter(exercise=>
             exercise.name.toLowerCase().includes(names)||
@@ -51,7 +53,7 @@ const SearchExercise=()=>{
             <div className="flex flex-wrap gap-5 justify-center">
                 {bodyPart.map((body,index)=><SearchCard key={index} data={body} getDisplayData={getDisplayData}/>)}
             </div>
-            {exercises.length==0?<div className="flex justify-center pt-10 text-black font-bold">No Result</div>:<Exercise data={exercises} />}
+            {exercises.length==0?<div className="flex justify-center pt-10 text-black font-bold text-xl">No Result</div>:<Exercise data={exercises} name={dispName} />}
         </div>
     )
 }
