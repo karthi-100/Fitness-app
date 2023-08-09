@@ -1,7 +1,8 @@
-const Exercise=()=>{
+import ExerciseCard from "./ExerciseCard/ExerciseCard"
+const Exercise=({data})=>{
 return(
     <div>
-        Exercise
+        {data.map((d,index)=><ExerciseCard key={index} exercises={d}/>)}
     </div>
 )
 
