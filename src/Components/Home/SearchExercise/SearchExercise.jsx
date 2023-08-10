@@ -5,7 +5,16 @@ import Exercise from "../../Exercise/Exercise";
 import Gifs from '../../Assets/Gifs.gif'
 const SearchExercise=()=>{
     const [name,setName]=useState("");
-    const [exercises,setExercises]=useState([])
+    const [exercises,setExercises]=useState([{bodyPart: 'upper arms', equipment: 'dumbbell 1', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 1',target:"kav"},
+    {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 2',target:"kav"},
+    {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 3',target:"kav"},
+    {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 4',target:"kav"},
+    {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 5',target:"kav"}
+    ,{bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbell 6',target:"kav"},
+    {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 7',target:"kav"},
+    {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 8',target:"kav"},
+    {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 9',target:"kav"}
+    ])
     const [bodyPart,setBodyPart]=useState([])
     const [dispName,setDispName]=useState("")
     useEffect(()=>{
