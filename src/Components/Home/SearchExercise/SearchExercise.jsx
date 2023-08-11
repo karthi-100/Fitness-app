@@ -9,8 +9,8 @@ const SearchExercise=()=>{
     {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 2',target:"kav"},
     {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 3',target:"kav"},
     {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 4',target:"kav"},
-    {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 5',target:"kav"}
-    ,{bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbell 6',target:"kav"},
+    {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 5',target:"kav"},
+    {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbell 6',target:"kav"},
     {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 7',target:"kav"},
     {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 8',target:"kav"},
     {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 9',target:"kav"}
