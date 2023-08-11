@@ -5,16 +5,7 @@ import Exercise from "../../Exercise/Exercise";
 import Gifs from '../../Assets/Gifs.gif'
 const SearchExercise=()=>{
     const [name,setName]=useState("");
-    const [exercises,setExercises]=useState([{bodyPart: 'upper arms', equipment: 'dumbbell 1', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 1',target:"kav"},
-    {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 2',target:"kav"},
-    {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 3',target:"kav"},
-    {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 4',target:"kav"},
-    {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 5',target:"kav"},
-    {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbell 6',target:"kav"},
-    {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 7',target:"kav"},
-    {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 8',target:"kav"},
-    {bodyPart: 'upper arms', equipment: 'dumbbell', gifUrl: `${Gifs}`, id: '0333', name: 'dumbbell 9',target:"kav"}
-    ])
+    const [exercises,setExercises]=useState([])
     const [bodyPart,setBodyPart]=useState([])
     const [dispName,setDispName]=useState("")
     useEffect(()=>{
@@ -23,7 +14,7 @@ const SearchExercise=()=>{
             setBodyPart([...displayParts])
         }
         getExerciseData()
-    },[])
+    },[name])
     const handleName=(e)=>{
         setName(e.target.value)
     }
@@ -48,11 +39,11 @@ const SearchExercise=()=>{
     const handleSearch=()=>{
         if(name){
             search(name)
-            setName("")
+           setName("")
         }
     }
     return(
-        <div className="p-7">
+        <div className="p-7 pt-16">
             <h1 className="text-black text-3xl text-center">Exercises</h1>
             <div className="flex justify-center p-4 gap-5">
                 <input type="text" className=" block border border-[#000] w-8/12 bg-gray-50 px-4 text-gray-900 text-sm rounded" value={name} onChange={handleName}/>
