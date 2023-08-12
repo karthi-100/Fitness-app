@@ -5,12 +5,10 @@ import ReactPaginate from 'react-paginate'
 import BackButton from '../Assets/BackButton.png'
 const Exercise=({data,name})=>{
     const [currentPage,setCurrentPage]=useState(1)
-    const [exercisesPerPage] = useState(4)
+    const [exercisesPerPage] = useState(9)
     const indexOfLast=currentPage*exercisesPerPage;
     const indexOfFirstExercise = indexOfLast - exercisesPerPage;
     const currentExercises = data.slice(indexOfFirstExercise, indexOfLast);
-       
-    
     const handlePageChange=(e)=>{
         setCurrentPage(e.selected)
         console.log(currentPage);

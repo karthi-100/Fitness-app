@@ -2,7 +2,8 @@ import { useEffect,useState } from "react"
 import {exerciseOptions,fetchData} from "../../../utils/Server"
 import SearchCard from "./SearchCard/SearchCard";
 import Exercise from "../../Exercise/Exercise";
-import Gifs from '../../Assets/Gifs.gif'
+import { Link } from "react-router-dom";
+import BackButton from "../../Assets/BackButton.png"
 const SearchExercise=()=>{
     const [name,setName]=useState("");
     const [exercises,setExercises]=useState([])
@@ -44,6 +45,7 @@ const SearchExercise=()=>{
     }
     return(
         <div className="p-7 pt-16">
+            <Link to={"/"}><img src={BackButton} alt="pooda venna" className='w-[35px] absolute top-14 left-14 hover:scale-[120%] ease-in-out duration-300 ' /></Link>
             <h1 className="text-black text-3xl text-center">Exercises</h1>
             <div className="flex justify-center p-4 gap-5">
                 <input type="text" className=" block border border-[#000] w-8/12 bg-gray-50 px-4 text-gray-900 text-sm rounded" value={name} onChange={handleName}/>

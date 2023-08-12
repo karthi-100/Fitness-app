@@ -1,14 +1,11 @@
-
-import SearchExercise from "./SearchExercise/SearchExercise"
-import Exercise from "../Exercise/Exercise"
 import Header from "../Header/Header";
-
+import Footer from "../Footer/Footer";
 const Home=()=>{
 return(
     <div>
         <Header />
-        <SearchExercise />
-        {/* <Exercise /> */}
+        {/* <SearchExercise /> */}
+        <Footer />
 
     </div>
 )
