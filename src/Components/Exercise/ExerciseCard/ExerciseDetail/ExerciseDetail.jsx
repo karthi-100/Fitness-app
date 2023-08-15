@@ -30,7 +30,7 @@ function ExerciseDetail() {
     },[])
   return (
     <div className='w-screen'>
-      <Link to={"/exercise"}><img src={BackButton} alt="pooda venna" className='w-[35px] absolute top-14 left-14 hover:scale-[120%] ease-in-out duration-300 ' /></Link>
+      <Link to={"/exercise"}><img src={BackButton} alt="pooda venna" className='w-[35px] absolute top-12 left-12 hover:scale-[120%] ease-in-out duration-300 ' /></Link>
     <div className='md:flex md:justify-around sm:justify-center h-screen items-center w-screen p-16'>
          <img src={exercise.gifUrl} alt="" className='self-center w-fit md:w-[40%]'/>
          <div className='text-lg md:text-xl'>
@@ -38,8 +38,8 @@ function ExerciseDetail() {
             <div className='max-w-lg'>
             <div className='text-black mb-2 '>Equipment:<span>{exercise.equipment}</span></div>
             <div className=' mb-3 text-black text-justify'>{description}</div>
-            <div className='text-black font-medium bg-[#4da82f] rounded-full w-fit px-3 py-1 mb-2'>{exercise.bodyPart}</div>
-            <div className='text-black font-medium bg-[#4da82f] rounded-full w-fit px-3 py-1 mb-2'>{exercise.target}</div>
+            <div className='text-black font-medium bg-[#4da82f] rounded-full w-fit px-3 py-1 mb-2 cursor-pointer'>{exercise.bodyPart}</div>
+            <div className='text-black font-medium bg-[#4da82f] rounded-full w-fit px-3 py-1 mb-2 cursor-pointer'>{exercise.target}</div>
             </div>  
         </div> 
     </div>
