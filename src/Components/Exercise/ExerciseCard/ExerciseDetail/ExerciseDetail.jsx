@@ -36,7 +36,7 @@ function ExerciseDetail() {
          <div className='text-lg md:text-xl'>
             <div className='text-center mb-2 sm:text-base md:text-2xl font-bold pb-3'>{exercise.name.charAt(0).toUpperCase()+exercise.name.slice(1)}</div>
             <div className='max-w-lg'>
-            <div className='text-black mb-2 '>Equipment:<span>{exercise.equipment}</span></div>
+            <div className='text-black mb-2 font-normal'>Equipment:&nbsp;&nbsp;<span>{exercise.equipment.charAt(0).toUpperCase()+exercise.equipment.slice(1)}</span></div>
             <div className=' mb-3 text-black text-justify'>{description}</div>
             <div className='text-black font-medium bg-[#4da82f] rounded-full w-fit px-3 py-1 mb-2 cursor-pointer'>{exercise.bodyPart}</div>
             <div className='text-black font-medium bg-[#4da82f] rounded-full w-fit px-3 py-1 mb-2 cursor-pointer'>{exercise.target}</div>
