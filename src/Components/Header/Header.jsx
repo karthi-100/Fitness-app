@@ -1,9 +1,10 @@
 import React from 'react'
 import Navbar from './Navbar/Navbar'
 import Banner from './Banner/Banner'
+import Fitgym from '../Assets/Fitgym.jpg'
 function Header() {
   return (
-    <div className='bg-[url("src/Components/Assets/Fitgym.jpg")] bg-cover min-h-screen opacity- bg-center backdrop-blur-sm drop-shadow-'>
+    <div style={{backgroundImage:`url(${Fitgym})`}} className=' bg-cover min-h-screen opacity- bg-center backdrop-blur-sm drop-shadow-'>
         <Navbar />
         <Banner />
     </div>

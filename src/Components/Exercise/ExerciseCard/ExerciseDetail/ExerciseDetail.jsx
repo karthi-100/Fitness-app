@@ -25,7 +25,7 @@ function ExerciseDetail() {
         else if(exercise.bodyPart==="waist")
           setDescription(`The quadratus lumborum sits deep in the back waist, attaching to the top of the pelvis and traveling up to the last rib and the sides of the lumbar vertebrae. When the quadratus lumborum contracts, it pulls the pelvis and rib cage on the same side closer together. The abdominal obliques also help this action.`)
         else
-          setDescription(`enter a valid exercise da stark uh`)
+          setDescription(`Regular exercise can have a positive impact on mental health, including depression, anxiety, and ADHD. It can also relieve stress, improve memory, help you sleep better, and boost your overall mood. `)
         
     },[])
   return (

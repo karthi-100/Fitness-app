@@ -3,16 +3,18 @@ import { useState,useEffect } from 'react';
 import { Link } from "react-router-dom";
 import ReactPaginate from 'react-paginate'
 import BackButton from '../Assets/BackButton.png'
+
 const Exercise=({data,name})=>{
+    
     const [currentPage,setCurrentPage]=useState(1)
-    const [exercisesPerPage] = useState(9)
+    const exercisesPerPage = 9
     const indexOfLast=currentPage*exercisesPerPage;
     const indexOfFirstExercise = indexOfLast - exercisesPerPage;
     const currentExercises = data.slice(indexOfFirstExercise, indexOfLast);
     const handlePageChange=(e)=>{
-        setCurrentPage(e.selected)
+        setCurrentPage(e.selected+1)
         console.log(currentPage);
-        window.scrollTo({top:1800, behavior:'smooth'})
+        window.scrollTo({top:0, behavior:'smooth'})
     }
 return(
     <div>
@@ -21,11 +23,11 @@ return(
         {currentExercises.map((d,index)=><ExerciseCard key={index} exercises={d} name={name} />)}
     </div>
     <div className="flex justify-around font-extrabold">
-    {data.length>6 &&<ReactPaginate 
+    {<ReactPaginate 
         nextLabel={<span className='text-2xl px-2 hover:scale-150 ease-in-out duration-200 '>{">"}</span>}
-        renderOnZeroPageCount={null}
         pageRangeDisplayed={3}
-        pageCount={Math.ceil(data.length/exercisesPerPage)+1}
+        
+        pageCount={Math.ceil(data.length/exercisesPerPage)}
         previousLabel={<span className='text-2xl hover:scale-150  ease-in-out duration-200 px-2'>{"<"}</span>}
         containerClassName='flex gap-1 items-center p-4'
         pageClassName='text-xl text-black  p-3 py-1'
